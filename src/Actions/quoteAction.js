@@ -1,11 +1,16 @@
-import { NEW_QUOTE } from "./type"
+import { NEXT_QUOTE, PUSH_QUOTE } from "./type"
 
-const newQuoteAction = (text, author) => {
+const nextQuoteAction = () => {
     return {
-        type: NEW_QUOTE,
-        text: text,
-        author: author
+        type: NEXT_QUOTE
     };
 };
 
-export {newQuoteAction};
+const pushQuoteAction = (quotes) => {
+    return {
+        type: PUSH_QUOTE,
+        quotes: quotes
+    }
+}
+
+export { nextQuoteAction, pushQuoteAction };
